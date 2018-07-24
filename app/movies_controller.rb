@@ -66,7 +66,7 @@ end
 
 def can_update_using_update_method
   # Update movie title to "Wat, huh?"
-  Movie.create(title: "Wat?")
+  movie.create(title: "Wat?")
   movie.update(title: "Wat, huh?")
 end
 

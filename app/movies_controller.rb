@@ -24,7 +24,7 @@ end
 
 def can_be_created_in_a_block(args = { title: "The Room", release_date: 2003 })
   Movie.create do |m|
-    m.create(args)
+    m.update(args)
   end
 end
 

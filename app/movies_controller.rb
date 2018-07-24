@@ -61,14 +61,13 @@ def can_be_found_updated_and_saved
   # Updtate the title "Awesome Flick" to "Even Awesomer Flick"
   Movie.create(title: "Awesome Flick")
   movie = Movie.find_by(title: 'Awesome Flick')
-  movie.update(title: "Evene Awesomer Flick")
+  movie.update(title: "Even Awesomer Flick")
 end
 
 def can_update_using_update_method
   # Update movie title to "Wat, huh?"
   Movie.create(title: "Wat?")
-  __
-  __
+  movie = Movie.update(title: "Wat, huh?")
 end
 
 def can_update_multiple_items_at_once
@@ -76,7 +75,7 @@ def can_update_multiple_items_at_once
   5.times do |i|
     Movie.create(title: "Movie_#{i}", release_date: 2000+i)
   end
-  __
+  Movie.update_all title: "A Movie"
 end
 
 def can_destroy_a_single_item
